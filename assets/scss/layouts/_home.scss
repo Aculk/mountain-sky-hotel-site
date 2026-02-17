@@ -1,0 +1,605 @@
+/* --------------------------------------------- */
+/*   HOME PAGE – PREMIUM + MOUNTAIN SKY STYLE    */
+/* --------------------------------------------- */
+
+@import "../components/vars";
+
+/* ГЛОБАЛЬНО УБИРАЕМ ПОДЧЁРКИВАНИЕ */
+a {
+  text-decoration: none !important;
+}
+
+/* Общие классы */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------- */
+/* COMFORT — ВЕРСИЯ PREMIUM (глубокое видео + весь текст на видео) */
+/* --------------------------------------------------------- */
+
+.comfort {
+  position: relative;
+  overflow: hidden;
+  background: #f7f7f7;
+
+  &__video-wrapper {
+    position: relative;
+    height: 920px; /* Увеличили высоту — теперь видео "длинное" */
+    overflow: hidden;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.82);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(5, 7, 12, 0.55),
+      rgba(5, 7, 12, 0.20)
+    );
+    z-index: 1;
+  }
+
+  /* блок текста */
+  &__title-block {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 68px;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-top: 26px;
+    font-size: 26px;
+    line-height: 1.55;
+  }
+
+  /* новые преимущества поверх видео */
+  &__benefits {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.92;
+
+    p {
+      width: 32%;
+    }
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      text-align: center;
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  /* золотая дуга */
+  &__arc {
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+    width: 1500px;
+    height: 750px;
+    border: 1px solid rgba(200, 142, 84, 0.35);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}
+
+/* ---------------------------------------------------- */
+/*   NEW ROOMS SECTION — КАК НА МАКЕТЕ PREMIUM          */
+/* ---------------------------------------------------- */
+
+.rooms-new {
+  background: #ffffff;
+  padding: 160px 0 100px;
+  position: relative;
+  z-index: 5;
+
+  /* верхняя часть */
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+    position: relative;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  }
+
+  &__count {
+    font-size: 26px;
+    letter-spacing: 0.12em;
+    color: #273043;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 64px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: #273043;
+    text-transform: uppercase;
+
+    @media (max-width: 900px) {
+      font-size: 48px;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    color: #c88e54;
+    padding: 14px 30px;
+    border: 1px solid #c88e54;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background: #c88e54;
+      color: white;
+    }
+
+    @media (max-width: 1100px) {
+      margin-top: 10px;
+    }
+  }
+
+  /* карточки */
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+/* Карточка */
+.room-new {
+  text-align: center;
+
+  &__img {
+    width: 100%;
+    height: 520px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__name {
+    margin-top: 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #273043;
+  }
+}
+
+
+/* ---------------------------------------------------- */
+/*   МЯГКИЙ ПЕРЕХОД ИЗ ROOMS → SPA                      */
+/* ---------------------------------------------------- */
+
+.rooms-to-spa {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f7f7f7 100%
+  );
+}
+
+
+
+/* ---------------------------------------------------- */
+/* SPA SECTION                                          */
+/* ---------------------------------------------------- */
+
+.spa {
+  position: relative;
+  padding-top: 140px;
+  margin-top: -100px;
+  padding-bottom: 160px; /* было меньше — увеличиваем! */
+  z-index: 3;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: url('/assets/img/spa-bg.jpg') center/cover no-repeat;
+    filter: brightness(0.45);
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -300px;
+      left: 50%;
+      width: 1600px;
+      height: 1600px;
+      transform: translateX(-50%);
+      border: 1px solid rgba(200, 142, 84, 0.3);
+      border-radius: 50%;
+      z-index: 2;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 1100px;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 58px;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 80px;
+  }
+
+  &__center-img {
+    width: 450px;
+    height: 600px;
+    margin: 0 auto 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__option {
+    position: relative;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 40px;
+    border-radius: 40px;
+    border: 1px solid #c88e54;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+
+    &:hover {
+      background: #c88e54;
+      color: #000;
+    }
+  }
+}
+
+/* ---------------------------------------------------- */
+/*   ПЛАВНЫЙ ПЕРЕХОД ИЗ SPA → RESTAURANT                 */
+/* ---------------------------------------------------- */
+
+.spa-to-restaurant {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    #0a0a0a00 0%,     /* полностью прозрачный */
+    #f5f5f5 100%      /* плавный переход в ресторан */
+  );
+}
+
+
+/* ---------------------------------------------------- */
+/* RESTAURANT SECTION                                   */
+/* ---------------------------------------------------- */
+
+.restaurant {
+  background: #f5f5f5;
+  padding-top: 180px;
+  margin-top: -100px;
+  padding-bottom: 100px;
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+    width: 55%;
+
+    @media (max-width: 1100px) {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &--big {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &--small {
+      height: 300px;
+    }
+  }
+
+  &__content {
+    width: 45%;
+
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
+  }
+
+  &__pretitle {
+    color: #273043;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #273043;
+    font-size: 54px;
+    text-align: left;
+    margin-bottom: 30px;
+
+    @media (max-width: 1100px) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin-top: 20px;
+    border: 1px solid #c88e54;
+    color: #c88e54;
+    padding: 14px 40px;
+    border-radius: 40px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      background: #c88e54;
+      color: #fff;
+    }
+  }
+}
+
+.restaurant-to-offers {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    #f5f5f5 0%,
+    #ffffff 100%
+  );
+}
+
+/* ---------------------------------------------------- */
+/* SPECIAL OFFERS                                       */
+/* ---------------------------------------------------- */
+
+.offers {
+  background: #f5f5f5;
+  padding-top: 180px;
+  margin-top: -100px;
+  padding-bottom: 100px;
+
+  &__title {
+    color: #273043;
+    margin-bottom: 70px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 40px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+
+  &__divider {
+    width: 3px;
+    height: 80%;
+    background: rgba(200, 142, 84, 0.5); /* ярче и заметнее */
+    margin: 0 auto;
+    border-radius: 3px;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+}
+
+.offer-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 35px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #273043;
+    margin-bottom: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: inline-block;
+    border: 1px solid #c88e54;
+    color: #c88e54;
+    padding: 12px 30px;
+    border-radius: 40px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      background: #c88e54;
+      color: #fff;
+    }
+  }
+}
+
+.offers-to-footer {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    #f5f5f5 0%,
+    #273043 100%
+  );
+}

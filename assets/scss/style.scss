@@ -1,0 +1,97 @@
+@import "/components/vars";
+@import "/components/header";
+@import "/components/hero";
+@import "/components/footer";
+@import "/layouts/home";
+@import "/layouts/booking";
+@import "/layouts/rooms";
+@import "/layouts/spa";
+@import "/layouts/rest";
+@import "/layouts/about";
+@import "/layouts/cont";
+@import "/layouts/coming-soon";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: #000; // чтобы точно убрать белое
+}
+
+.lang--js .lang__dropdown {
+    display: none;
+}
+
+.lang--js.open .lang__dropdown {
+    display: block;
+}
+
+
+@media (max-width: 576px) {
+
+    .header {
+        padding: 12px 0;
+    }
+
+    .header__inner {
+        grid-template-columns: auto auto auto;
+    }
+
+    .nav {
+        display: none; // позже сделаем бургер-меню
+    }
+
+    .logo img {
+        max-height: 48px;
+    }
+
+    .hero {
+        height: 100vh;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero__logo {
+        width: 280px;
+        top: 0;
+    }
+
+    .hero__text {
+        font-size: 18px;
+        top: -5px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .nav {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .logo img {
+        max-height: 55px;
+    }
+
+    .hero__logo {
+        width: 360px;
+    }
+
+    .hero__text {
+        font-size: 22px;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+

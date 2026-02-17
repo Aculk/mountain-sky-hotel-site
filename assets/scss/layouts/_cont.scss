@@ -1,0 +1,161 @@
+/* ==========================
+   CONTACT PAGE
+========================== */
+
+.cont-page {
+    background: #111;
+    color: #fff;
+}
+
+/* ========== HERO ========== */
+
+.cont-hero {
+    position: relative;
+    height: 100vh;
+    background: url("/assets/img/cont/hero-bg.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cont-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.cont-hero__pattern {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: .15;
+}
+
+.cont-hero__inner {
+    position: relative;
+    z-index: 5;
+}
+
+.cont-hero h1 {
+    font-size: 110px;
+    margin-bottom: 60px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* CONTACT LIST */
+
+.cont-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.cont-block {
+    text-align: center;
+}
+
+.cont-label {
+    opacity: .7;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cont-phone,
+.cont-email {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* SOCIALS */
+
+.cont-socials {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.soc {
+    color: #fff;
+    font-size: 22px;
+    opacity: .8;
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+        color: #cfa166;
+    }
+}
+
+/* ========== MAP ========== */
+
+.cont-map {
+    padding: 120px 0;
+    background: #f8f5f1;
+    color: #0e1a2b;
+    text-align: center;
+}
+
+.cont-map h2 {
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.location-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.location-address {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.route-btn {
+    display: inline-block;
+    padding: 18px 45px;
+    border: 2px solid #cfa166;
+    border-radius: 40px;
+    color: #0e1a2b;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .3s;
+
+    &:hover {
+        background: #cfa166;
+        color: #fff;
+    }
+}
+
+.map-wrapper {
+    margin-top: 50px;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 550px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 992px) {
+    .cont-hero h1 {
+        font-size: 58px;
+    }
+
+    .cont-contacts {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .cont-phone,
+    .cont-email {
+        font-size: 26px;
+    }
+}

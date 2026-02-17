@@ -1,0 +1,12 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.35" stroke="#cfa166" stroke-width="2">
+  <path d="M600 100L850 250V550L600 700L350 550V250L600 100Z"></path>
+  <path d="M600 250L750 350V500L600 600L450 500V350L600 250Z"></path>
+  <path d="M600 400L700 470V550L600 620L500 550V470L600 400Z"></path>
+  
+  <path d="M270 300L450 420V650L270 770L100 650V420L270 300Z"></path>
+  <path d="M930 300L1100 420V650L930 770L760 650V420L930 300Z"></path>
+
+  <path d="M600 820L780 920V1100L600 1200L420 1100V920L600 820Z"></path>
+</g>
+</svg>

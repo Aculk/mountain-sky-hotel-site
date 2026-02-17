@@ -1,0 +1,437 @@
+/* ==========================================================================
+   RESTAURANT PAGE — GLOBAL
+========================================================================== */
+
+.rest-page {
+    background: #f8f5f1;
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   HERO SECTION
+========================================================================== */
+
+.rest-hero {
+    height: 100vh;
+    background: url("/assets/img/rest/hero.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.rest-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+
+
+/* Декоративная геометрия поверх Hero */
+.rest-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/assets/img/rest/geo-lines.png") center/contain no-repeat;
+    opacity: 0.25;
+    z-index: 2;
+}
+
+.rest-hero__inner {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    max-width: 900px;
+}
+
+.rest-hero__time {
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    margin-bottom: 25px;
+    opacity: .9;
+}
+
+.rest-hero__title {
+    font-size: 120px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1;
+}
+
+.rest-hero__divider {
+    width: 4px;
+    height: 90px;
+    background: #fff;
+    margin: 0 auto 35px;
+}
+
+.rest-hero__subtitle {
+    font-size: 26px;
+    line-height: 1.6;
+    opacity: .95;
+}
+
+
+
+
+/* ==========================================================================
+   SECTION — CENTER TITLE
+========================================================================== */
+
+.rest-section {
+    padding: 140px 8%;
+    text-align: center;
+    position: relative;
+}
+
+/* декоративная дуга сверху секции */
+.arc-top::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 420px;
+    border-radius: 0 0 50% 50%;
+    border-bottom: 2px solid #d8c2a5;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -200px;
+}
+
+.rest-section__title {
+    font-size: 70px;
+    color: #0e1a2b;
+    margin-bottom: 25px;
+    letter-spacing: 0.03em;
+}
+
+.rest-section__subtitle {
+    font-size: 26px;
+    opacity: .9;
+    margin-bottom: 40px;
+}
+
+
+
+/* ==========================================================================
+   IMAGE BLOCK WITH ARC
+========================================================================== */
+.rest-section__images img {
+    width: 100%;
+    border-radius: 0 0 260px 260px;
+}
+
+
+
+/* ==========================================================================
+   GALLERY COMPONENT
+========================================================================== */
+
+.rest-gallery {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.rest-gallery-track {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.rest-gallery-track img {
+    width: 100%;
+    flex: 0 0 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* стрелки */
+.rest-arrow {
+    width: 90px;
+    height: 90px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: .3s;
+    z-index: 5;
+}
+
+.rest-arrow:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.rest-arrow.prev { left: 30px; }
+.rest-arrow.next { right: 30px; }
+
+
+
+/* ==========================================================================
+   BLOCK — СОВРЕМЕННАЯ КУХНЯ
+========================================================================== */
+
+.rest-block {
+    padding: 140px 8%;
+}
+
+.rest-block__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.rest-btn {
+    border: 2px solid #cfa166;
+    padding: 14px 38px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #0e1a2b;
+    transition: .3s;
+}
+
+.rest-btn:hover {
+    background: #cfa166;
+    color: #000;
+}
+
+
+
+/* ==========================================================================
+   SWEDISH LINE BLOCK
+========================================================================== */
+
+.rest-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    padding: 140px 8%;
+    align-items: center;
+}
+
+.rest-line__img img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.rest-line__content h2 {
+    font-size: 72px;
+    margin-bottom: 25px;
+    color: #0e1a2b;
+}
+
+.rest-line__content p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.rest-line__time {
+    font-size: 22px;
+    letter-spacing: 0.03em;
+}
+
+
+
+/* ==========================================================================
+   BAR BLOCK
+========================================================================== */
+
+.rest-bar {
+    padding: 140px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.rest-bar__content h2 {
+    font-size: 72px;
+    margin-bottom: 25px;
+}
+
+.rest-bar__content p {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+
+
+/* ================================
+   STYLED RESTAURANT LINK
+================================ */
+
+.rest-bar__menu-link {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+    transition: 0.3s ease;
+}
+
+/* Золотая линия */
+.rest-bar__menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    height: 2px;
+    background: #cfa166;
+    transition: 0.3s ease;
+    opacity: 0.8;
+}
+
+/* Hover эффект */
+.rest-bar__menu-link:hover {
+    color: #cfa166;
+}
+
+.rest-bar__menu-link:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+
+
+
+/* ==========================================================================
+   SPA PROMO BLOCK
+========================================================================== */
+
+.rest-spa {
+    height: 90vh;
+    background: url("/assets/img/rest/spa-bg.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rest-spa__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.rest-spa__inner {
+    position: relative;
+    z-index: 5;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.rest-spa h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.rest-spa p {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.rest-btn-white {
+    border: 2px solid #fff;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-size: 22px;
+    color: white;
+    transition: .3s;
+}
+
+.rest-btn-white:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+
+/* ==========================================================================
+   MOBILE ADAPTATION
+========================================================================== */
+
+@media (max-width: 992px) {
+
+    .rest-hero__title { font-size: 70px; }
+    .rest-hero__subtitle { font-size: 20px; }
+    .rest-hero__divider { height: 60px; }
+
+    .rest-gallery-track img { height: 400px; }
+
+    .rest-arrow {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .rest-block__header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .rest-line,
+    .rest-bar {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .rest-line__content h2,
+    .rest-bar__content h2 {
+        font-size: 54px;
+    }
+
+    .arc-top::before {
+        height: 300px;
+        top: -150px;
+        border-width: 1px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .rest-hero__title { font-size: 48px; }
+    .rest-hero__subtitle { font-size: 18px; }
+    .rest-hero__divider { height: 40px; }
+
+    .rest-section__title { font-size: 44px; }
+    .rest-section__subtitle { font-size: 20px; }
+
+    .rest-gallery-track img { height: 280px; }
+
+    .rest-line__content h2,
+    .rest-bar__content h2 {
+        font-size: 40px;
+    }
+
+    .rest-line__content p,
+    .rest-bar__content p {
+        font-size: 18px;
+    }
+
+    .rest-btn,
+    .rest-btn-white {
+        font-size: 18px;
+        padding: 12px 28px;
+    }
+
+}
